@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/thakursaurabh1998/simple-database/server"
 )
 
 func main() {
@@ -13,4 +15,6 @@ func main() {
 }
 
 func run() error {
+	err := server.StartTCPServer()
+	return err
 }
